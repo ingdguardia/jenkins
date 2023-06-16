@@ -1,10 +1,14 @@
 pipeline{
     agent any
+        tools{
+            maven '3.9.2'
+        }
         stages{
             stage('test'){
             steps{
             dir("jenkins"){
-                 sh "mvn clean compile test"
+                 sh 'mvn --version'
+                 sh 'mvn clean compile test'
 
             }
                 }

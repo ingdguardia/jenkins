@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage('test'){
             steps{
-            dir("simple-java-maven-app"){
+            dir("jenkins"){
                  sh "mvn clean compile test"
 
             }
